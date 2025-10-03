@@ -74,10 +74,11 @@ a:hover { text-decoration: underline; }
 .footer a { color:#e2e8f0; }
 .socials a { margin-right:.8rem; }
 /* Custom logo image */
+/* Logo image */
 .logo-img {
-  height: 34px;   /* matches old placeholder size */
+  height: 34px;   /* fixed size to match nav height */
   width: auto;
+  margin-right: 8px;
   vertical-align: middle;
-  border-radius: 6px;   /* optional: soften edges */
-  margin-right: 6px;    /* space between logo and text */
 }
+
