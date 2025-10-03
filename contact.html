@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact • AutoDrainage</title>
+<meta name="description" content="AutoDrainage — smart drainage design tools for engineers.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="logo"></span> AutoDrainage</a>
+    <div class="nav-links"><a class="" href="index.html">Home</a>
+<a class="" href="features.html">Features</a>
+<a class="" href="about.html">About</a>
+<a class="active" href="contact.html">Contact</a></div>
+    <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a class="" href="index.html">Home</a>
+<a class="" href="features.html">Features</a>
+<a class="" href="about.html">About</a>
+<a class="active" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <h2>Get in touch</h2>
+    <p>Tell us about your use case and we’ll get back to you.</p>
+    <div class="card">
+      <form method="POST" action="https://formspree.io/f/your-id-here">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap: .8rem;">
+          <div>
+            <label>Name</label><br/>
+            <input name="name" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;">
+          </div>
+          <div>
+            <label>Email</label><br/>
+            <input name="email" type="email" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;">
+          </div>
+        </div>
+        <div style="margin-top:.8rem;">
+          <label>Message</label><br/>
+          <textarea name="message" rows="6" style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" placeholder="Project, timeline, anything else..."></textarea>
+        </div>
+        <div style="margin-top:1rem;">
+          <button class="btn btn-primary" type="submit">Send</button>
+        </div>
+      </form>
+      <p style="margin-top:.6rem; color:var(--muted); font-size:.9rem;">Replace the form action with your Formspree/WS provider to receive emails.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+    <div>© 2025 AutoDrainage. All rights reserved.</div>
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">X (Twitter)</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
