@@ -76,9 +76,10 @@ a:hover { text-decoration: underline; }
 /* Custom logo image */
 /* Logo image */
 .logo-img {
-  height: 34px;   /* fixed size to match nav height */
+  height: 34px;   /* adjust if you want slightly larger, e.g., 40px */
   width: auto;
   margin-right: 8px;
   vertical-align: middle;
 }
+
 
