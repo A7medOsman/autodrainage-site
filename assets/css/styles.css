@@ -32,13 +32,30 @@ a:hover { text-decoration: underline; }
 .nav-links a { padding:.5rem .75rem; border-radius:.6rem; }
 .nav-links a.active, .nav-links a:hover { background: var(--primary-light); }
 .menu-btn { display:none; }
+/* Hide mobile menu by default */
+.mobile-menu { display: none; }
 
 @media (max-width: 820px) {
-  .nav-links { display:none; }
-  .menu-btn { display:block; background:transparent; border:1px solid #e5e7eb; padding:.5rem .7rem; border-radius:.6rem; }
-  .mobile-menu { display:none; background:var(--white); border-bottom:1px solid #e5e7eb; }
-  .mobile-menu a { display:block; padding:.9rem 1.2rem; }
-  .mobile-menu a:hover { background:var(--primary-light); }
+  .nav-links { display: none; }
+  .menu-btn {
+    display: block;
+    background: transparent;
+    border: 1px solid #e5e7eb;
+    padding: .5rem .7rem;
+    border-radius: .6rem;
+  }
+  /* mobile drawer content */
+  .mobile-menu {
+    /* stays hidden until JS toggles it to block */
+    background: var(--white);
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .mobile-menu a { display: block; padding: .9rem 1.2rem; }
+  .mobile-menu a:hover { background: var(--primary-light); }
+}
+/* Force-hide the mobile menu on desktop widths */
+@media (min-width: 821px) {
+  .mobile-menu { display: none !important; }
 }
 
 .hero {
