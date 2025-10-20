@@ -1,50 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About • AutoDrainage</title>
-<meta name="description" content="AutoDrainage — smart drainage design tools for engineers.">
-<link rel="icon" href="assets/img/favicon.png">
-<link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About • AutoDrainage</title>
+  <meta name="description" content="AutoDrainage — smart drainage design tools for engineers." />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-<nav class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html"><span class="logo"></span> AutoDrainage</a>
-    <div class="nav-links"><a class="" href="index.html">Home</a>
-<a class="" href="features.html">Features</a>
-<a class="active" href="about.html">About</a>
-<a class="" href="contact.html">Contact</a></div>
-    <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
-  </div>
-  <div id="mobileMenu" class="mobile-menu">
-    <a class="" href="index.html">Home</a>
-<a class="" href="features.html">Features</a>
-<a class="active" href="about.html">About</a>
-<a class="" href="contact.html">Contact</a>
-  </div>
-</nav>
-
-<section class="section">
-  <div class="container">
-    <h2>Our mission</h2>
-    <p>We’re engineers building design tools that are efficient, transparent, and aligned with UK water-industry best practice.</p>
-    <h2>Contact</h2>
-    <p>United Kingdom, Cardiff • Email: info@autodrainage.co.uk</p>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
-    <div>© 2025 AutoDrainage. All rights reserved.</div>
-    <div class="socials">
-      <a href="#">LinkedIn</a>
-      <a href="#">X (Twitter)</a>
-      <a href="#">GitHub</a>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="AutoDrainage" style="width:34px;height:34px;border-radius:10px" />
+        AutoDrainage
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a class="active" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#resources">Resources</a>
+      </div>
+      <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
     </div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a class="active" href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#resources">Resources</a>
+    </div>
+  </nav>
+
+  <!-- Wrap content so footer pins to the bottom on short pages -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Our mission</h2>
+        <p>
+          We’re engineers building design tools that are efficient, transparent, and aligned with UK water-industry best practice.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          United Kingdom, Cardiff &middot;
+          Email:
+          <a href="mailto:info@autodrainage.co.uk">info@autodrainage.co.uk</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+      <div>© 2025 AutoDrainage. All rights reserved.</div>
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
