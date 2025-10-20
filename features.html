@@ -1,84 +1,87 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Features • AutoDrainage</title>
-<meta name="description" content="AutoDrainage features — Colebrook–White drainage design.">
-<link rel="icon" href="assets/img/favicon.png">
-<link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Features • AutoDrainage</title>
+  <meta name="description" content="AutoDrainage features — Colebrook–White drainage design." />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-<nav class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <img src="assets/img/logo.png" alt="AutoDrainage" style="width:34px;height:34px;border-radius:10px" />
-      AutoDrainage
-    </a>
-    <div class="nav-links">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="AutoDrainage" style="width:34px;height:34px;border-radius:10px" />
+        AutoDrainage
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="features.html">Features</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#resources">Resources</a>
+      </div>
+      <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
       <a href="index.html">Home</a>
       <a class="active" href="features.html">Features</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="index.html#resources">Resources</a>
     </div>
-    <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
-  </div>
-  <div id="mobileMenu" class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a class="active" href="features.html">Features</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="index.html#resources">Resources</a>
-  </div>
-</nav>
+  </nav>
 
-<section class="section">
-  <div class="container">
-    <h2>Core features</h2>
-   <div class="grid-3">
-  <div class="card">
-    <h3>Accurate long-section profiles</h3>
-    <p>Generate hydraulic gradients suitable for review and submission.</p>
-  </div>
-  <div class="card">
-    <h3>Flexible network connectivity</h3>
-    <p>Build networks with non-sequential downstream mapping.</p>
-  </div>
-  <div class="card">
-    <h3>Unlimited flow paths & outfalls</h3>
-    <p>Model multiple routes and outlets without constraints.</p>
-  </div>
-  <div class="card">
-    <h3>Fast & accurate pipe sizing</h3>
-    <p>Colebrook–White calculations for full and part-full pipes.</p>
-  </div>
-</div>
+  <!-- Make everything between nav and footer live inside <main> so footer pins bottom -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Core features</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Accurate long-section profiles</h3>
+            <p>Generate hydraulic gradients suitable for review and submission.</p>
+          </div>
+          <div class="card">
+            <h3>Flexible network connectivity</h3>
+            <p>Build networks with non-sequential downstream mapping.</p>
+          </div>
+          <div class="card">
+            <h3>Unlimited flow paths &amp; outfalls</h3>
+            <p>Model multiple routes and outlets without constraints.</p>
+          </div>
+          <div class="card">
+            <h3>Fast &amp; accurate pipe sizing</h3>
+            <p>Colebrook–White calculations for full and part-full pipes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <section class="section">
+      <div class="container">
+        <h2>Roadmap (short)</h2>
+        <ul>
+          <li>Android app enhancements (Play Store).</li>
+          <li>Export to branded PDF.</li>
+          <li>Cloud projects &amp; collaboration.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-<section class="section">
-  <div class="container">
-    <h2>Roadmap (short)</h2>
-    <ul>
-      <li>Android app enhancements (Play Store).</li>
-      <li>Export to branded PDF.</li>
-      <li>Cloud projects & collaboration.</li>
-    </ul>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
-    <div>© 2025 AutoDrainage. All rights reserved.</div>
-    <div class="socials">
-      <a href="#">LinkedIn</a>
-      <a href="#">X (Twitter)</a>
-      <a href="#">GitHub</a>
+  <footer class="footer">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+      <div>© 2025 AutoDrainage. All rights reserved.</div>
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">GitHub</a>
+      </div>
     </div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
