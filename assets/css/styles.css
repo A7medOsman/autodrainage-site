@@ -99,4 +99,33 @@ a:hover { text-decoration: underline; }
   vertical-align: middle;
 }
 
+  /* Store badges row (Google Play + Windows coming soon) */
+.store-row {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  margin-top: .8rem;
+}
+
+.store-badge {
+  display: inline-block;
+  padding: .5rem .7rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .6rem;
+  font-weight: 700;
+  font-size: .85rem;
+}
+
+.store-badge:hover {
+  background: var(--primary-light);
+  text-decoration: none;
+}
+
+.coming {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+
+
 
