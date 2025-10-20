@@ -1,3 +1,11 @@
+html, body { height: 100%; }                /* add */
+body {
+  /* keep your existing props and ADD these: */
+  min-height: 100vh;                        /* add */
+  display: flex;                            /* add */
+  flex-direction: column;                   /* add */
+}
+main { flex: 1; }                           /* add */
 
 :root {
   --primary: #03A9F4;
