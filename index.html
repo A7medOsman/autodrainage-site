@@ -1,31 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Home • AutoDrainage</title>
-<meta name="description" content="AutoDrainage — smart drainage design tools for engineers.">
-<link rel="icon" href="assets/img/favicon.png">
-<link rel="stylesheet" href="assets/css/styles.css">
+<meta name="description" content="AutoDrainage — fast Colebrook–White drainage design for engineers.">
+<link rel="icon" href="assets/img/favicon.png" />
+<link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 <nav class="nav">
   <div class="container nav-inner">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="AutoDrainage Logo" class="logo-img" />
+      <img src="assets/img/logo.png" alt="AutoDrainage" style="width:34px;height:34px;border-radius:10px" />
       AutoDrainage
     </a>
-    <div class="nav-links"><a class="active" href="index.html">Home</a>
-<a class="" href="features.html">Features</a>
-<a class="" href="about.html">About</a>
-<a class="" href="contact.html">Contact</a></div>
+    <div class="nav-links">
+      <a class="active" href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#resources">Resources</a>
+    </div>
     <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
   </div>
   <div id="mobileMenu" class="mobile-menu">
     <a class="active" href="index.html">Home</a>
-<a class="" href="features.html">Features</a>
-<a class="" href="about.html">About</a>
-<a class="" href="contact.html">Contact</a>
+    <a href="features.html">Features</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#resources">Resources</a>
   </div>
 </nav>
 
@@ -33,20 +37,24 @@
   <div class="container hero-inner">
     <div>
       <span class="badge">Early Access</span>
-      <h1>Design surface and foul water drainage with speed and confidence.</h1>
-      <p class="lead">AutoDrainage helps civil engineers size pipes, check capacity and compliance, and generate reports — fast.</p>
+      <h1>Design drainage networks fast — with Colebrook–White.</h1>
+      <p class="lead">Size full and part-full pipes, check capacity and compliance, and export tidy summaries.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="features.html">Explore features</a>
-        <a class="btn btn-outline" href="contact.html">Request a demo</a>
+        <a class="btn btn-primary" href="#">Launch Web App</a>
+        <a class="btn btn-outline" href="#resources">User Guide</a>
+      </div>
+      <div class="store-row">
+        <a class="store-badge" href="#">Google Play</a>
+        <span class="coming">Windows app: coming soon</span>
       </div>
     </div>
     <div>
       <div class="card">
         <h3>Why AutoDrainage?</h3>
         <ul>
-          <li>Accurate hydraulics aligned with UK guidance.</li>
-          <li>Clean UI for rapid iteration.</li>
-          <li>Reports ready for client submission.</li>
+          <li>Accurate Colebrook–White (full & part-full).</li>
+          <li>Clear, transparent calculations.</li>
+          <li>Outputs ready for client submission.</li>
         </ul>
       </div>
     </div>
@@ -58,37 +66,46 @@
     <h2>Highlights</h2>
     <div class="grid-3">
       <div class="card">
-        <h3>Fast workflow</h3>
-        <p>From input to results in minutes with sensible defaults.</p>
+        <h3>CW engine</h3>
+        <p>Reliable Colebrook–White for real-world design.</p>
       </div>
       <div class="card">
-        <h3>Transparent calculations</h3>
-        <p>Clear steps and formulas — no black boxes.</p>
+        <h3>Network overview</h3>
+        <p>Multiple pipes with flexible downstream references.</p>
       </div>
       <div class="card">
-        <h3>Export-ready</h3>
-        <p>Generate tidy summaries you can share with clients.</p>
+        <h3>Compliance flags</h3>
+        <p>DCG/CEWIS-aligned checks with configurable thresholds.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="background: var(--white); border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
+<section id="resources" class="section" style="background:var(--white);border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
   <div class="container">
-    <h2>FAQs</h2>
-    <div class="faq-item">
-      <div class="faq-q">Is this suitable for UK projects? <span class="chev">▾</span></div>
-      <div class="faq-a">Yes. AutoDrainage is being built around UK standards and best practice.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Will there be a mobile app? <span class="chev">▾</span></div>
-      <div class="faq-a">An early access Android app is in testing. Join the mailing list to hear when it’s public.</div>
+    <h2>Resources</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>User Guide</h3>
+        <p>Step-by-step instructions to get productive quickly.</p>
+        <a class="btn btn-outline" href="assets/docs/AutoDrainage_User_Guide.pdf">Open PDF</a>
+      </div>
+      <div class="card">
+        <h3>Release Notes</h3>
+        <p>What’s new and improved, version by version.</p>
+        <a class="btn btn-outline" href="#">Read notes</a>
+      </div>
+      <div class="card">
+        <h3>Support</h3>
+        <p>Questions or feedback? We’re here to help.</p>
+        <a class="btn btn-outline" href="contact.html">Contact us</a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
     <div>© 2025 AutoDrainage. All rights reserved.</div>
     <div class="socials">
       <a href="#">LinkedIn</a>
