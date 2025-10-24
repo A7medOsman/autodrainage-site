@@ -69,3 +69,22 @@ a:hover{text-decoration:underline;}
 .store-badge{display:inline-block;padding:.5rem .7rem;border:1px solid #e5e7eb;border-radius:.6rem;font-weight:700;font-size:.85rem;}
 .store-badge:hover{background:var(--primary-light);text-decoration:none;}
 .coming{color:var(--muted);font-size:.9rem;}
+
+
+/* Alt sections for subtle banding */
+.section--alt { background: var(--white); border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
+
+/* Product shelf */
+.product-shelf { display: grid; gap: 1.2rem; }
+.product-card { display: grid; grid-template-columns: 1.1fr 1.2fr; gap: 1.2rem; align-items: center; }
+.product-media { width: 100%; }
+.product-shot { height: 260px; border: 1px solid #e5e7eb; border-radius: 1rem; background: #f1f5f9; display: grid; place-items: center; color: #94a3b8; font-weight: 600; }
+.product-body h3 { margin-top: 0; }
+.product-points { margin: .6rem 0 1rem; padding-left: 1.1rem; }
+.gp-wrap { display: flex; align-items: center; gap: .8rem; }
+.gp-badge { height: 48px; width: auto; display: block; }
+
+@media (max-width: 920px) {
+  .product-card { grid-template-columns: 1fr; }
+}
+
