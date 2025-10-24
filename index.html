@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AutoDrainage • Efficient Drainage Design</title>
-
-  <meta name="description" content="AutoDrainage — fast Colebrook–White drainage design for engineers." />
+  <meta name="description" content="AutoDrainage — fast, professional drainage design tools for engineers." />
   <link rel="icon" href="assets/img/favicon.png" />
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Modern, crisp font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
+  <!-- NAV (pinned) -->
+  <nav class="nav" id="topNav">
     <div class="container nav-inner">
       <a class="brand" href="#home">
         <img src="assets/logo.png" alt="AutoDrainage" class="logo-img" />
@@ -43,29 +41,52 @@
   <main id="home">
     <!-- HERO -->
     <header class="hero">
+      <div class="hero-bg">
+        <!-- soft shapes -->
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+      </div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <h1>Design drainage networks faster — with Colebrook–White.</h1>
+          <h1>Design drainage networks — faster, clearer, smarter.</h1>
           <p class="lead">
-            Full and part-full pipe design, flexible connectivity, and concise outputs engineers can trust.
+            Build flow paths, size and review networks, and share concise, submission-ready outputs. Built for professional practice.
           </p>
           <div class="cta">
             <a class="btn btn-primary" href="#">Launch Web App</a>
-            <a class="btn btn-ghost" href="#products">See products</a>
+            <a class="btn btn-ghost" href="#products">Explore products</a>
+          </div>
+          <div class="hero-trust">
+            <span>New:</span> Android app now available on Google Play
           </div>
         </div>
-        <div class="hero-card">
-          <div class="card">
-            <h3>Why AutoDrainage?</h3>
-            <ul>
-              <li>Accurate Colebrook–White (full &amp; part-full)</li>
-              <li>Non-sequential network connectivity</li>
-              <li>Submission-ready summaries</li>
-            </ul>
+
+        <!-- Visual mock: device + long section line -->
+        <div class="hero-art">
+          <div class="device">
+            <div class="device-bar"></div>
+            <div class="device-screen">
+              <svg viewBox="0 0 360 200" width="100%" height="100%" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lg" x1="0" x2="1">
+                    <stop offset="0" stop-color="#48C3B6"/>
+                    <stop offset="1" stop-color="#76E1D3"/>
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="0" width="360" height="200" fill="#F7FAFB"/>
+                <polyline points="0,140 40,120 80,130 120,110 160,100 200,118 240,90 280,95 320,70 360,80"
+                          fill="none" stroke="url(#lg)" stroke-width="4" />
+                <g fill="#AEC3D3">
+                  <rect x="16" y="160" width="80" height="8" rx="4" />
+                  <rect x="112" y="160" width="80" height="8" rx="4" />
+                  <rect x="208" y="160" width="80" height="8" rx="4" />
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-      <div class="hero-fade"></div>
     </header>
 
     <!-- PRODUCTS (App Highlight) -->
@@ -73,28 +94,41 @@
       <div class="container">
         <div class="section-head">
           <h2>Products</h2>
-          <p class="sub">Desktop and mobile tools that fit real engineering workflows.</p>
+          <p class="sub">Tools that fit real engineering workflows — desktop and mobile.</p>
         </div>
 
         <article class="showcase">
           <div class="shot">
-            <!-- Replace with real screenshot when ready -->
-            <div class="shot-placeholder">App screenshot</div>
+            <!-- Replace with a real screenshot when ready -->
+            <div class="shot-img">
+              <svg viewBox="0 0 640 360" width="100%" height="100%">
+                <defs>
+                  <linearGradient id="card" x1="0" x2="1">
+                    <stop offset="0" stop-color="#E7FFF8"/>
+                    <stop offset="1" stop-color="#F2FFFB"/>
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="0" width="640" height="360" fill="url(#card)" />
+                <rect x="36" y="40" width="570" height="220" rx="12" fill="#fff" stroke="#E3EEF3"/>
+                <rect x="36" y="280" width="220" height="40" rx="10" fill="#fff" stroke="#E3EEF3"/>
+                <rect x="270" y="280" width="220" height="40" rx="10" fill="#fff" stroke="#E3EEF3"/>
+              </svg>
+            </div>
           </div>
           <div class="info">
             <h3>AutoDrainage — Android App</h3>
             <p>
-              Take Colebrook–White sizing on the move. Build flow paths, size pipes, and share clear results from site or meetings.
+              Take network design on the move. Build flow paths, review capacity, and share clear results from site or meetings.
             </p>
             <ul class="bullets">
-              <li>Full &amp; part-full design using Colebrook–White</li>
+              <li>Fast, intuitive workflow</li>
               <li>Flexible downstream references</li>
               <li>Clean, shareable outputs</li>
             </ul>
             <div class="store">
               <a class="gp-link"
                  href="https://play.google.com/store/apps/details?id=com.autodrainage.pipe_design_app&pcampaignid=web_share"
-                 aria-label="Get it on Google Play">
+                 target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
                 <img class="gp-badge" src="assets/img/google-play-badge.png" alt="Get it on Google Play" />
               </a>
               <span class="coming">Windows app: coming soon</span>
@@ -109,33 +143,39 @@
       <div class="container">
         <div class="section-head">
           <h2>Features</h2>
-          <p class="sub">Built for professional practice.</p>
+          <p class="sub">Designed for clarity, speed, and confidence.</p>
         </div>
 
         <div class="grid-3">
-          <div class="card">
+          <div class="card feat">
+            <div class="ico" aria-hidden="true">📈</div>
             <h3>Accurate long-section profiles</h3>
-            <p>Clear hydraulic gradients for full and part-full conditions.</p>
+            <p>Clear gradients and summaries for technical review.</p>
           </div>
-          <div class="card">
+          <div class="card feat">
+            <div class="ico" aria-hidden="true">🧭</div>
             <h3>Flexible network connectivity</h3>
             <p>Non-sequential links with downstream references you control.</p>
           </div>
-          <div class="card">
-            <h3>Unlimited flow paths &amp; outfalls</h3>
+          <div class="card feat">
+            <div class="ico" aria-hidden="true">🔀</div>
+            <h3>Unlimited flow paths & outfalls</h3>
             <p>Model complex layouts without artificial limits.</p>
           </div>
-          <div class="card">
-            <h3>Fast &amp; accurate pipe sizing</h3>
-            <p>Trusted Colebrook–White engine for reliable outputs.</p>
+          <div class="card feat">
+            <div class="ico" aria-hidden="true">⚡</div>
+            <h3>Fast pipe sizing</h3>
+            <p>Get to a defensible solution quickly.</p>
           </div>
-          <div class="card">
-            <h3>Compliance flags</h3>
-            <p>DCG/CEWIS-aligned checks with configurable thresholds.</p>
+          <div class="card feat">
+            <div class="ico" aria-hidden="true">🧪</div>
+            <h3>Scenario checks</h3>
+            <p>Stress-test return periods and uplifts side-by-side.</p>
           </div>
-          <div class="card">
+          <div class="card feat">
+            <div class="ico" aria-hidden="true">📤</div>
             <h3>Exportable reports</h3>
-            <p>Neat PDFs/CSVs ready for planning &amp; design reviews.</p>
+            <p>Neat PDFs/CSVs ready for planning & design reviews.</p>
           </div>
         </div>
       </div>
@@ -146,13 +186,14 @@
       <div class="container">
         <div class="section-head">
           <h2>How it works</h2>
-          <p class="sub">A simple flow that mirrors how engineers actually work.</p>
+          <p class="sub">A straightforward flow that mirrors how engineers actually work.</p>
         </div>
+
         <ol class="steps">
-          <li><strong>Set design criteria</strong> — choose Storm or Foul, set ks &amp; viscosity (UK-ready defaults).</li>
-          <li><strong>Build network</strong> — add pipes, inflows, and downstream references (non-sequential allowed).</li>
-          <li><strong>Run &amp; review</strong> — check capacity and flags against DCG/CEWIS thresholds.</li>
-          <li><strong>Export</strong> — download tidy PDFs/CSVs for submissions and reviews.</li>
+          <li><strong>Set criteria</strong> — choose storm or foul; set roughness and viscosity.</li>
+          <li><strong>Build network</strong> — add pipes, inflows, and downstream references.</li>
+          <li><strong>Run & review</strong> — check capacities and flags.</li>
+          <li><strong>Export</strong> — tidy outputs for submissions and reviews.</li>
         </ol>
       </div>
     </section>
@@ -196,11 +237,11 @@
             <div class="form-grid">
               <div>
                 <label for="name">Name</label><br />
-                <input id="name" name="name" required class="input">
+                <input id="name" name="name" required class="input" />
               </div>
               <div>
                 <label for="email">Email</label><br />
-                <input id="email" name="email" type="email" required class="input">
+                <input id="email" name="email" type="email" required class="input" />
               </div>
             </div>
             <div class="mt-8">
