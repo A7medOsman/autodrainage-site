@@ -115,3 +115,43 @@ h3{font-size:1.12rem}
 .footer{border-top:1px solid rgba(15,23,42,.06);padding:28px 0;margin-top:28px;background:linear-gradient(180deg,#ffffff,#f6faf9)}
 .f-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .socials a{margin-right:.8rem;color:#0F172A}
+
+/* === Top/Bottom bars, width, and type — DROP-IN OVERRIDES === */
+
+/* Pleasant light mint bar + subtle border */
+:root{
+  --bar-bg: #F2FFFB;          /* top/bottom bar background */
+  --bar-border: #BEEFE6;      /* bar border color */
+}
+
+/* Make text bigger */
+html { font-size: 18px; }
+@media (min-width: 1280px) { html { font-size: 18.5px; } }
+
+/* Make page wider */
+.container { max-width: 1400px; }  /* bump from previous value */
+
+/* NAV: fix to viewport so it never hides, deepen a touch */
+.nav{
+  position: fixed;      /* was sticky */
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--bar-bg) !important;
+  border-bottom: 1px solid var(--bar-border) !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+.nav-inner{ padding: 1.25rem 0; }  /* a bit deeper */
+body{ padding-top: 84px; }          /* offset for fixed nav (adjust if needed) */
+
+/* Footer stripe color */
+.footer{
+  background: var(--bar-bg) !important;
+  border-top: 1px solid var(--bar-border) !important;
+}
+
+/* Keep active nav highlight visible on the new bar color */
+.nav-links a.active,
+.nav-links a:hover{
+  background: rgba(16,185,129,.14) !important;
+}
+
