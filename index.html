@@ -1,128 +1,196 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Home • AutoDrainage</title>
-<meta name="description" content="AutoDrainage — fast Colebrook–White drainage design for engineers.">
-<link rel="icon" href="assets/img/favicon.png" />
-<link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoDrainage • Efficient Drainage Design</title>
+  <meta name="description" content="AutoDrainage — fast Colebrook–White drainage design for engineers.">
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-<nav class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-     <img src="assets/logo.png" alt="AutoDrainage" style="width:34px;height:34px;border-radius:10px" />
-      AutoDrainage
-    </a>
-    <div class="nav-links">
-      <a class="active" href="index.html">Home</a>
-      <a href="features.html">Features</a>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="AutoDrainage" class="logo-img" />
+        AutoDrainage
+      </a>
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="features.html">Products</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how">How it works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#resources">Resources</a>
+      </div>
+      <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a class="active" href="#home">Home</a>
+      <a href="features.html">Products</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#how">How it works</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="#resources">Resources</a>
     </div>
-    <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
-  </div>
-  <div id="mobileMenu" class="mobile-menu">
-    <a class="active" href="index.html">Home</a>
-    <a href="features.html">Features</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="#resources">Resources</a>
-  </div>
-</nav>
+  </nav>
 
-<header class="hero">
-  <div class="container hero-inner">
-    <div>
-      <span class="badge">Early Access</span>
-      <h1>Design drainage networks fast — with Colebrook–White.</h1>
-      <p class="lead">Size full and part-full pipes, check capacity and compliance, and export tidy summaries.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#">Launch Web App</a>
-        <a class="btn btn-outline" href="#resources">User Guide</a>
+  <main id="home">
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="badge">Engineer-ready</span>
+          <h1>Design drainage networks fast — with Colebrook–White.</h1>
+          <p class="lead">Size full and part-full pipes, check capacity and compliance, and export tidy summaries.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#">Launch Web App</a>
+            <a class="btn btn-outline" href="#resources">User Guide</a>
+          </div>
+          <div class="store-row">
+            <a class="store-badge" href="#">Google Play</a>
+            <span class="coming">Windows app: coming soon</span>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Why AutoDrainage?</h3>
+            <ul>
+              <li>Accurate Colebrook–White (full &amp; part-full).</li>
+              <li>Flexible non-sequential connectivity.</li>
+              <li>Outputs ready for client submission.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="store-row">
-        <a class="store-badge" href="#">Google Play</a>
-        <span class="coming">Windows app: coming soon</span>
+    </header>
+
+    <!-- Products / Highlights -->
+    <section class="section">
+      <div class="container">
+        <h2>Products</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Accurate long-section profiles</h3>
+            <p>Clear hydraulic gradients for full and part-full conditions.</p>
+          </div>
+          <div class="card">
+            <h3>Flexible network connectivity</h3>
+            <p>Non-sequential links with downstream references you control.</p>
+          </div>
+          <div class="card">
+            <h3>Unlimited flow paths &amp; outfalls</h3>
+            <p>Model complex drainage layouts without artificial limits.</p>
+          </div>
+          <div class="card">
+            <h3>Fast &amp; accurate pipe sizing</h3>
+            <p>Colebrook–White engine for reliable design outputs.</p>
+          </div>
+          <div class="card">
+            <h3>Compliance flags</h3>
+            <p>DCG/CEWIS-aligned checks with configurable thresholds.</p>
+          </div>
+          <div class="card">
+            <h3>Exportable reports</h3>
+            <p>Neat PDFs/CSVs ready for planning &amp; design reviews.</p>
+          </div>
+        </div>
+        <div class="mt-12">
+          <a class="btn btn-outline" href="features.html">See full product list</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section" style="background:var(--white);border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
+      <div class="container">
+        <h2>Pricing</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Starter</h3>
+            <p><strong>Free</strong></p>
+            <ul>
+              <li>Core calculations</li>
+              <li>1 project &amp; 50 pipes</li>
+              <li>PDF/CSV export</li>
+            </ul>
+            <a class="btn btn-outline" href="#">Start free</a>
+          </div>
+          <div class="card" style="border-color:var(--primary);">
+            <h3>Professional</h3>
+            <p><strong>£29 / month</strong></p>
+            <ul>
+              <li>Unlimited projects</li>
+              <li>Team collaboration</li>
+              <li>Compliance dashboards</li>
+            </ul>
+            <a class="btn btn-primary" href="#">Start trial</a>
+          </div>
+          <div class="card">
+            <h3>Enterprise</h3>
+            <p><strong>Contact us</strong></p>
+            <ul>
+              <li>SSO &amp; on-prem options</li>
+              <li>Priority support</li>
+              <li>Custom integrations</li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html">Talk to sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><strong>Set design criteria</strong> — choose Storm or Foul, set ks &amp; viscosity. UK-ready defaults.</li>
+          <li><strong>Build network</strong> — add pipes, inflows, and downstream references (non-sequential allowed).</li>
+          <li><strong>Run &amp; review</strong> — check capacity and flags against DCG/CEWIS thresholds.</li>
+          <li><strong>Export</strong> — download tidy PDFs/CSVs for submissions and reviews.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="section" style="background:var(--white);border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
+      <div class="container">
+        <h2>Resources</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>User Guide</h3>
+            <p>Step-by-step instructions to get productive quickly.</p>
+            <a class="btn btn-outline" href="assets/docs/AutoDrainage_App.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+          </div>
+          <div class="card">
+            <h3>Release Notes</h3>
+            <p>What’s new and improved, version by version.</p>
+            <a class="btn btn-outline" href="#">Read notes</a>
+          </div>
+          <div class="card">
+            <h3>Support</h3>
+            <p>Questions or feedback? We’re here to help.</p>
+            <a class="btn btn-outline" href="contact.html">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container f-row">
+      <div>© 2025 AutoDrainage. All rights reserved.</div>
+      <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">GitHub</a>
       </div>
     </div>
-    <div>
-      <div class="card">
-        <h3>Why AutoDrainage?</h3>
-        <ul>
-          <li>Accurate Colebrook–White (full & part-full).</li>
-          <li>Clear, transparent calculations.</li>
-          <li>Outputs ready for client submission.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
+  </footer>
 
-<section class="section">
-  <div class="container">
-    <h2>Highlights</h2>
-    <div class="grid-3">
-  <div class="card">
-    <h3>Accurate long-section profiles</h3>
-    <p>Clear hydraulic gradients for full and part-full conditions.</p>
-  </div>
-  <div class="card">
-    <h3>Flexible network connectivity</h3>
-    <p>Non-sequential links with downstream references you control.</p>
-  </div>
-  <div class="card">
-    <h3>Unlimited flow paths & outfalls</h3>
-    <p>Model complex drainage layouts without artificial limits.</p>
-  </div>
-  <div class="card">
-    <h3>Fast & accurate pipe sizing</h3>
-    <p>Colebrook–White engine for reliable design outputs.</p>
-  </div>
-</div>
-  </div>
-</section>
-
-<section id="resources" class="section" style="background:var(--white);border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
-  <div class="container">
-    <h2>Resources</h2>
-    <div class="grid-3">
-      <div class="card">
-        <h3>User Guide</h3>
-        <p>Step-by-step instructions to get productive quickly.</p>
-        <a class="btn btn-outline"
-         href="assets/AutoDrainage_App.pdf"
-         target="_blank"
-         rel="noopener noreferrer">Open PDF</a>
-
-
-      </div>
-      <div class="card">
-        <h3>Release Notes</h3>
-        <p>What’s new and improved, version by version.</p>
-        <a class="btn btn-outline" href="#">Read notes</a>
-      </div>
-      <div class="card">
-        <h3>Support</h3>
-        <p>Questions or feedback? We’re here to help.</p>
-        <a class="btn btn-outline" href="contact.html">Contact us</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
-    <div>© 2025 AutoDrainage. All rights reserved.</div>
-    <div class="socials">
-      <a href="#">LinkedIn</a>
-      <a href="#">X (Twitter)</a>
-      <a href="#">GitHub</a>
-    </div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
