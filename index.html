@@ -1,276 +1,52 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AutoDrainage • Efficient Drainage Design</title>
-  <meta name="description" content="AutoDrainage — fast, professional drainage design tools for engineers." />
-  <link rel="icon" href="assets/img/favicon.png" />
-  <!-- Modern, crisp font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <!-- NAV (pinned) -->
-  <nav class="nav" id="topNav">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">
-        <img src="assets/logo.png" alt="AutoDrainage" class="logo-img" />
-        AutoDrainage
-      </a>
-      <div class="nav-links">
-        <a class="active" href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
-    </div>
-    <div id="mobileMenu" class="mobile-menu">
-      <a class="active" href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="#resources">Resources</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+function toggleMobileMenu(){
+  const mm = document.getElementById('mobileMenu');
+  if(!mm) return;
+  mm.style.display = (mm.style.display === 'block') ? 'none' : 'block';
+}
 
-  <main id="home">
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-bg">
-        <!-- soft shapes -->
-        <div class="blob b1"></div>
-        <div class="blob b2"></div>
-        <div class="blob b3"></div>
-      </div>
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Design drainage networks — faster, clearer, smarter.</h1>
-          <p class="lead">
-            Build flow paths, size and review networks, and share concise, submission-ready outputs. Built for professional practice.
-          </p>
-          <div class="cta">
-            <a class="btn btn-primary" href="#">Launch Web App</a>
-            <a class="btn btn-ghost" href="#products">Explore products</a>
-          </div>
-          <div class="hero-trust">
-            <span>New:</span> Android app now available on Google Play
-          </div>
-        </div>
+// Sticky nav elevation on scroll
+const nav = document.getElementById('topNav');
+window.addEventListener('scroll', () => {
+  if(!nav) return;
+  nav.classList.toggle('scrolled', window.scrollY > 6);
+});
 
-        <!-- Visual mock: device + long section line -->
-        <div class="hero-art">
-          <div class="device">
-            <div class="device-bar"></div>
-            <div class="device-screen">
-              <svg viewBox="0 0 360 200" width="100%" height="100%" aria-hidden="true">
-                <defs>
-                  <linearGradient id="lg" x1="0" x2="1">
-                    <stop offset="0" stop-color="#48C3B6"/>
-                    <stop offset="1" stop-color="#76E1D3"/>
-                  </linearGradient>
-                </defs>
-                <rect x="0" y="0" width="360" height="200" fill="#F7FAFB"/>
-                <polyline points="0,140 40,120 80,130 120,110 160,100 200,118 240,90 280,95 320,70 360,80"
-                          fill="none" stroke="url(#lg)" stroke-width="4" />
-                <g fill="#AEC3D3">
-                  <rect x="16" y="160" width="80" height="8" rx="4" />
-                  <rect x="112" y="160" width="80" height="8" rx="4" />
-                  <rect x="208" y="160" width="80" height="8" rx="4" />
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+// Smooth-scroll + ScrollSpy (active tab follows scroll)
+const sectionIds = ['home','products','features','resources','contact'];
+const linkMap = {};
+document.querySelectorAll('.nav-links a').forEach(a => {
+  const id = a.getAttribute('href').replace('#','');
+  linkMap[id] = a;
+});
 
-    <!-- PRODUCTS (App Highlight) -->
-    <section id="products" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Products</h2>
-          <p class="sub">Tools that fit real engineering workflows — desktop and mobile.</p>
-        </div>
+// Smooth scrolling for anchor clicks
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if(!a) return;
+  const id = a.getAttribute('href').slice(1);
+  const el = document.getElementById(id);
+  if(el){
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Close mobile menu on selection
+    const mm = document.getElementById('mobileMenu');
+    if(mm) mm.style.display = 'none';
+  }
+});
 
-        <article class="showcase">
-          <div class="shot">
-            <!-- Replace with a real screenshot when ready -->
-            <div class="shot-img">
-              <svg viewBox="0 0 640 360" width="100%" height="100%">
-                <defs>
-                  <linearGradient id="card" x1="0" x2="1">
-                    <stop offset="0" stop-color="#E7FFF8"/>
-                    <stop offset="1" stop-color="#F2FFFB"/>
-                  </linearGradient>
-                </defs>
-                <rect x="0" y="0" width="640" height="360" fill="url(#card)" />
-                <rect x="36" y="40" width="570" height="220" rx="12" fill="#fff" stroke="#E3EEF3"/>
-                <rect x="36" y="280" width="220" height="40" rx="10" fill="#fff" stroke="#E3EEF3"/>
-                <rect x="270" y="280" width="220" height="40" rx="10" fill="#fff" stroke="#E3EEF3"/>
-              </svg>
-            </div>
-          </div>
-          <div class="info">
-            <h3>AutoDrainage — Android App</h3>
-            <p>
-              Take network design on the move. Build flow paths, review capacity, and share clear results from site or meetings.
-            </p>
-            <ul class="bullets">
-              <li>Fast, intuitive workflow</li>
-              <li>Flexible downstream references</li>
-              <li>Clean, shareable outputs</li>
-            </ul>
-            <div class="store-logos">
-              <a class="gp-link"
-                 href="https://play.google.com/store/apps/details?id=com.autodrainage.pipe_design_app&pcampaignid=web_share"
-                 target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
-                <img class="gp-badge" src="assets/img/google-play-badge.png" alt="Get it on Google Play">
-              </a>
-              <span class="store-divider" aria-hidden="true"></span>
-              <span class="store-note">Windows app: <strong>coming soon</strong></span>
-            </div>
+// ScrollSpy via IntersectionObserver
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const id = entry.target.id;
+    if (!sectionIds.includes(id)) return;
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.nav-links a').forEach(x => x.classList.remove('active'));
+      if (linkMap[id]) linkMap[id].classList.add('active');
+    }
+  });
+}, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Features</h2>
-          <p class="sub">Designed for clarity, speed, and confidence.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card feat">
-            <div class="ico" aria-hidden="true">📈</div>
-            <h3>Accurate long-section profiles</h3>
-            <p>Clear gradients and summaries for technical review.</p>
-          </div>
-          <div class="card feat">
-            <div class="ico" aria-hidden="true">🧭</div>
-            <h3>Flexible network connectivity</h3>
-            <p>Non-sequential links with downstream references you control.</p>
-          </div>
-          <div class="card feat">
-            <div class="ico" aria-hidden="true">🔀</div>
-            <h3>Unlimited flow paths & outfalls</h3>
-            <p>Model complex layouts without artificial limits.</p>
-          </div>
-          <div class="card feat">
-            <div class="ico" aria-hidden="true">⚡</div>
-            <h3>Fast pipe sizing</h3>
-            <p>Get to a defensible solution quickly.</p>
-          </div>
-          <div class="card feat">
-            <div class="ico" aria-hidden="true">🧪</div>
-            <h3>Scenario checks</h3>
-            <p>Stress-test return periods and uplifts side-by-side.</p>
-          </div>
-          <div class="card feat">
-            <div class="ico" aria-hidden="true">📤</div>
-            <h3>Exportable reports</h3>
-            <p>Neat PDFs/CSVs ready for planning & design reviews.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p class="sub">A straightforward flow that mirrors how engineers actually work.</p>
-        </div>
-
-        <ol class="steps">
-          <li><strong>Set criteria</strong> — choose storm or foul; set roughness and viscosity.</li>
-          <li><strong>Build network</strong> — add pipes, inflows, and downstream references.</li>
-          <li><strong>Run & review</strong> — check capacities and flags.</li>
-          <li><strong>Export</strong> — tidy outputs for submissions and reviews.</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- RESOURCES -->
-    <section id="resources" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Resources</h2>
-          <p class="sub">Start fast. Stay informed.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card">
-            <h3>User Guide</h3>
-            <p>Step-by-step instructions to get productive quickly.</p>
-            <a class="btn btn-ghost" href="assets/docs/AutoDrainage_App.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
-          </div>
-          <div class="card">
-            <h3>Release Notes</h3>
-            <p>What’s new and improved, version by version.</p>
-            <a class="btn btn-ghost" href="#">Read notes</a>
-          </div>
-          <div class="card">
-            <h3>Support</h3>
-            <p>Questions or feedback? We’re here to help.</p>
-            <a class="btn btn-ghost" href="#contact">Contact us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contact</h2>
-          <p class="sub">Tell us about your use case and we’ll get back to you.</p>
-        </div>
-        <div class="card">
-          <form method="POST" action="https://formspree.io/f/your-id-here">
-            <div class="form-grid">
-              <div>
-                <label for="name">Name</label><br />
-                <input id="name" name="name" required class="input" />
-              </div>
-              <div>
-                <label for="email">Email</label><br />
-                <input id="email" name="email" type="email" required class="input" />
-              </div>
-            </div>
-            <div class="mt-8">
-              <label for="message">Message</label><br />
-              <textarea id="message" name="message" rows="6" class="input" placeholder="Project, timeline, anything else..."></textarea>
-            </div>
-            <div class="mt-12">
-              <button class="btn btn-primary" type="submit">Send</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container f-row">
-      <div>© 2025 AutoDrainage. All rights reserved.</div>
-      <div class="socials">
-        <a href="#">LinkedIn</a>
-        <a href="#">X (Twitter)</a>
-        <a href="#">GitHub</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+sectionIds.forEach(id => {
+  const el = document.getElementById(id);
+  if(el) observer.observe(el);
+});
