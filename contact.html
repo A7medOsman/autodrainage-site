@@ -4,21 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact • AutoDrainage</title>
-  <meta name="description" content="AutoDrainage — smart drainage design tools for engineers." />
+  <meta name="description" content="AutoDrainage — contact the team." />
   <link rel="icon" href="assets/img/favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="AutoDrainage" style="width:34px;height:34px;border-radius:10px" />
-
-        AutoDrainage
-      </a>
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="AutoDrainage" class="logo-img" /> AutoDrainage</a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
+        <a href="features.html">Products</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#how">How it works</a>
         <a href="about.html">About</a>
         <a class="active" href="contact.html">Contact</a>
         <a href="index.html#resources">Resources</a>
@@ -27,54 +25,48 @@
     </div>
     <div id="mobileMenu" class="mobile-menu">
       <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
+      <a href="features.html">Products</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#how">How it works</a>
       <a href="about.html">About</a>
       <a class="active" href="contact.html">Contact</a>
       <a href="index.html#resources">Resources</a>
     </div>
   </nav>
 
-  <!-- Wrap page content so footer sticks to bottom on short pages -->
   <main>
     <section class="section">
       <div class="container">
         <h2>Get in touch</h2>
         <p>Tell us about your use case and we’ll get back to you.</p>
         <div class="card">
-          <!-- Replace action with your Formspree/endpoint URL -->
           <form method="POST" action="https://formspree.io/f/your-id-here">
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:.8rem;">
               <div>
                 <label for="name">Name</label><br />
-                <input id="name" name="name" required
-                  style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" />
+                <input id="name" name="name" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;">
               </div>
               <div>
                 <label for="email">Email</label><br />
-                <input id="email" name="email" type="email" required
-                  style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" />
+                <input id="email" name="email" type="email" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;">
               </div>
             </div>
             <div style="margin-top:.8rem;">
               <label for="message">Message</label><br />
-              <textarea id="message" name="message" rows="6"
-                style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;"
-                placeholder="Project, timeline, anything else..."></textarea>
+              <textarea id="message" name="message" rows="6" style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" placeholder="Project, timeline, anything else..."></textarea>
             </div>
             <div style="margin-top:1rem;">
               <button class="btn btn-primary" type="submit">Send</button>
             </div>
           </form>
-          <p style="margin-top:.6rem; color:var(--muted); font-size:.9rem;">
-            Replace the form action with your Formspree/WS provider to receive emails.
-          </p>
+          <p style="margin-top:.6rem; color:var(--muted); font-size:.9rem;">Replace the form action with your Formspree/WS provider to receive emails.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+    <div class="container f-row">
       <div>© 2025 AutoDrainage. All rights reserved.</div>
       <div class="socials">
         <a href="#">LinkedIn</a>
