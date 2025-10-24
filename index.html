@@ -4,8 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AutoDrainage • Efficient Drainage Design</title>
+
   <meta name="description" content="AutoDrainage — fast Colebrook–White drainage design for engineers." />
   <link rel="icon" href="assets/img/favicon.png" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -40,16 +44,17 @@
     <!-- HERO -->
     <header class="hero">
       <div class="container hero-inner">
-        <div>
-          <span class="badge">Engineer-ready</span>
-          <h1>Design drainage networks fast — with Colebrook–White.</h1>
-          <p class="lead">Size full and part-full pipes, check capacity and compliance, and export tidy summaries.</p>
+        <div class="hero-copy">
+          <h1>Design drainage networks faster — with Colebrook–White.</h1>
+          <p class="lead">
+            Full and part-full pipe design, flexible connectivity, and concise outputs engineers can trust.
+          </p>
           <div class="cta">
             <a class="btn btn-primary" href="#">Launch Web App</a>
-            <a class="btn btn-outline" href="#resources">User Guide</a>
+            <a class="btn btn-ghost" href="#products">See products</a>
           </div>
         </div>
-        <div>
+        <div class="hero-card">
           <div class="card">
             <h3>Why AutoDrainage?</h3>
             <ul>
@@ -60,44 +65,53 @@
           </div>
         </div>
       </div>
+      <div class="hero-fade"></div>
     </header>
 
-    <!-- PRODUCTS (App highlight) -->
-    <section id="products" class="section section--alt">
+    <!-- PRODUCTS (App Highlight) -->
+    <section id="products" class="section">
       <div class="container">
-        <h2>Products</h2>
-
-        <div class="product-shelf">
-          <!-- App card -->
-          <article class="product-card">
-            <div class="product-media">
-              <!-- Replace this placeholder with a real app screenshot if you have one -->
-              <div class="product-shot">App screenshot</div>
-            </div>
-            <div class="product-body">
-              <h3>AutoDrainage — Android App</h3>
-              <p>Our new mobile app brings Colebrook–White pipe sizing to your site and meetings. Build flow paths, size pipes, and share results quickly.</p>
-              <ul class="product-points">
-                <li>Full &amp; part-full design using Colebrook–White</li>
-                <li>Flexible downstream references</li>
-                <li>Clean, shareable outputs</li>
-              </ul>
-              <div class="gp-wrap">
-                <a href="#" aria-label="Get it on Google Play">
-                  <img class="gp-badge" src="assets/img/google-play-badge.png" alt="Get it on Google Play" />
-                </a>
-                <span class="coming">Windows app: coming soon</span>
-              </div>
-            </div>
-          </article>
+        <div class="section-head">
+          <h2>Products</h2>
+          <p class="sub">Desktop and mobile tools that fit real engineering workflows.</p>
         </div>
+
+        <article class="showcase">
+          <div class="shot">
+            <!-- Replace with real screenshot when ready -->
+            <div class="shot-placeholder">App screenshot</div>
+          </div>
+          <div class="info">
+            <h3>AutoDrainage — Android App</h3>
+            <p>
+              Take Colebrook–White sizing on the move. Build flow paths, size pipes, and share clear results from site or meetings.
+            </p>
+            <ul class="bullets">
+              <li>Full &amp; part-full design using Colebrook–White</li>
+              <li>Flexible downstream references</li>
+              <li>Clean, shareable outputs</li>
+            </ul>
+            <div class="store">
+              <a class="gp-link"
+                 href="https://play.google.com/store/apps/details?id=com.autodrainage.pipe_design_app&pcampaignid=web_share"
+                 aria-label="Get it on Google Play">
+                <img class="gp-badge" src="assets/img/google-play-badge.png" alt="Get it on Google Play" />
+              </a>
+              <span class="coming">Windows app: coming soon</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- FEATURES -->
     <section id="features" class="section">
       <div class="container">
-        <h2>Features</h2>
+        <div class="section-head">
+          <h2>Features</h2>
+          <p class="sub">Built for professional practice.</p>
+        </div>
+
         <div class="grid-3">
           <div class="card">
             <h3>Accurate long-section profiles</h3>
@@ -109,11 +123,11 @@
           </div>
           <div class="card">
             <h3>Unlimited flow paths &amp; outfalls</h3>
-            <p>Model complex drainage layouts without artificial limits.</p>
+            <p>Model complex layouts without artificial limits.</p>
           </div>
           <div class="card">
             <h3>Fast &amp; accurate pipe sizing</h3>
-            <p>Colebrook–White engine for reliable design outputs.</p>
+            <p>Trusted Colebrook–White engine for reliable outputs.</p>
           </div>
           <div class="card">
             <h3>Compliance flags</h3>
@@ -121,16 +135,19 @@
           </div>
           <div class="card">
             <h3>Exportable reports</h3>
-            <p>Neat summaries for planning &amp; design reviews.</p>
+            <p>Neat PDFs/CSVs ready for planning &amp; design reviews.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="section section--alt">
+    <section id="how" class="section">
       <div class="container">
-        <h2>How it works</h2>
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="sub">A simple flow that mirrors how engineers actually work.</p>
+        </div>
         <ol class="steps">
           <li><strong>Set design criteria</strong> — choose Storm or Foul, set ks &amp; viscosity (UK-ready defaults).</li>
           <li><strong>Build network</strong> — add pipes, inflows, and downstream references (non-sequential allowed).</li>
@@ -143,48 +160,54 @@
     <!-- RESOURCES -->
     <section id="resources" class="section">
       <div class="container">
-        <h2>Resources</h2>
+        <div class="section-head">
+          <h2>Resources</h2>
+          <p class="sub">Start fast. Stay informed.</p>
+        </div>
         <div class="grid-3">
           <div class="card">
             <h3>User Guide</h3>
             <p>Step-by-step instructions to get productive quickly.</p>
-            <a class="btn btn-outline" href="assets/docs/AutoDrainage_App.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+            <a class="btn btn-ghost" href="assets/docs/AutoDrainage_App.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
           </div>
           <div class="card">
             <h3>Release Notes</h3>
             <p>What’s new and improved, version by version.</p>
-            <a class="btn btn-outline" href="#">Read notes</a>
+            <a class="btn btn-ghost" href="#">Read notes</a>
           </div>
           <div class="card">
             <h3>Support</h3>
             <p>Questions or feedback? We’re here to help.</p>
-            <a class="btn btn-outline" href="#contact">Contact us</a>
+            <a class="btn btn-ghost" href="#contact">Contact us</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section section--alt">
+    <section id="contact" class="section">
       <div class="container">
-        <h2>Contact</h2>
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="sub">Tell us about your use case and we’ll get back to you.</p>
+        </div>
         <div class="card">
           <form method="POST" action="https://formspree.io/f/your-id-here">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:.8rem;">
+            <div class="form-grid">
               <div>
                 <label for="name">Name</label><br />
-                <input id="name" name="name" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" />
+                <input id="name" name="name" required class="input">
               </div>
               <div>
                 <label for="email">Email</label><br />
-                <input id="email" name="email" type="email" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" />
+                <input id="email" name="email" type="email" required class="input">
               </div>
             </div>
-            <div style="margin-top:.8rem;">
+            <div class="mt-8">
               <label for="message">Message</label><br />
-              <textarea id="message" name="message" rows="6" style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" placeholder="Project, timeline, anything else..."></textarea>
+              <textarea id="message" name="message" rows="6" class="input" placeholder="Project, timeline, anything else..."></textarea>
             </div>
-            <div style="margin-top:1rem;">
+            <div class="mt-12">
               <button class="btn btn-primary" type="submit">Send</button>
             </div>
           </form>
