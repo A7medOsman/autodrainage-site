@@ -4,41 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AutoDrainage • Efficient Drainage Design</title>
-  <meta name="description" content="AutoDrainage — fast Colebrook–White drainage design for engineers.">
+  <meta name="description" content="AutoDrainage — fast Colebrook–White drainage design for engineers." />
   <link rel="icon" href="assets/img/favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+  <!-- NAV -->
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="#home">
         <img src="assets/logo.png" alt="AutoDrainage" class="logo-img" />
         AutoDrainage
       </a>
       <div class="nav-links">
         <a class="active" href="#home">Home</a>
-        <a href="features.html">Products</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#products">Products</a>
+        <a href="#features">Features</a>
         <a href="#how">How it works</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
         <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
       </div>
       <button class="menu-btn" onclick="toggleMobileMenu()">Menu</button>
     </div>
     <div id="mobileMenu" class="mobile-menu">
       <a class="active" href="#home">Home</a>
-      <a href="features.html">Products</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#products">Products</a>
+      <a href="#features">Features</a>
       <a href="#how">How it works</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
       <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <main id="home">
-    <!-- Hero -->
+    <!-- HERO -->
     <header class="hero">
       <div class="container hero-inner">
         <div>
@@ -49,28 +48,56 @@
             <a class="btn btn-primary" href="#">Launch Web App</a>
             <a class="btn btn-outline" href="#resources">User Guide</a>
           </div>
-          <div class="store-row">
-            <a class="store-badge" href="#">Google Play</a>
-            <span class="coming">Windows app: coming soon</span>
-          </div>
         </div>
         <div>
           <div class="card">
             <h3>Why AutoDrainage?</h3>
             <ul>
-              <li>Accurate Colebrook–White (full &amp; part-full).</li>
-              <li>Flexible non-sequential connectivity.</li>
-              <li>Outputs ready for client submission.</li>
+              <li>Accurate Colebrook–White (full &amp; part-full)</li>
+              <li>Non-sequential network connectivity</li>
+              <li>Submission-ready summaries</li>
             </ul>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Products / Highlights -->
-    <section class="section">
+    <!-- PRODUCTS (App highlight) -->
+    <section id="products" class="section section--alt">
       <div class="container">
         <h2>Products</h2>
+
+        <div class="product-shelf">
+          <!-- App card -->
+          <article class="product-card">
+            <div class="product-media">
+              <!-- Replace this placeholder with a real app screenshot if you have one -->
+              <div class="product-shot">App screenshot</div>
+            </div>
+            <div class="product-body">
+              <h3>AutoDrainage — Android App</h3>
+              <p>Our new mobile app brings Colebrook–White pipe sizing to your site and meetings. Build flow paths, size pipes, and share results quickly.</p>
+              <ul class="product-points">
+                <li>Full &amp; part-full design using Colebrook–White</li>
+                <li>Flexible downstream references</li>
+                <li>Clean, shareable outputs</li>
+              </ul>
+              <div class="gp-wrap">
+                <a href="#" aria-label="Get it on Google Play">
+                  <img class="gp-badge" src="assets/img/google-play-badge.png" alt="Get it on Google Play" />
+                </a>
+                <span class="coming">Windows app: coming soon</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Features</h2>
         <div class="grid-3">
           <div class="card">
             <h3>Accurate long-section profiles</h3>
@@ -94,60 +121,18 @@
           </div>
           <div class="card">
             <h3>Exportable reports</h3>
-            <p>Neat PDFs/CSVs ready for planning &amp; design reviews.</p>
-          </div>
-        </div>
-        <div class="mt-12">
-          <a class="btn btn-outline" href="features.html">See full product list</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="section" style="background:var(--white);border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
-      <div class="container">
-        <h2>Pricing</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Starter</h3>
-            <p><strong>Free</strong></p>
-            <ul>
-              <li>Core calculations</li>
-              <li>1 project &amp; 50 pipes</li>
-              <li>PDF/CSV export</li>
-            </ul>
-            <a class="btn btn-outline" href="#">Start free</a>
-          </div>
-          <div class="card" style="border-color:var(--primary);">
-            <h3>Professional</h3>
-            <p><strong>£29 / month</strong></p>
-            <ul>
-              <li>Unlimited projects</li>
-              <li>Team collaboration</li>
-              <li>Compliance dashboards</li>
-            </ul>
-            <a class="btn btn-primary" href="#">Start trial</a>
-          </div>
-          <div class="card">
-            <h3>Enterprise</h3>
-            <p><strong>Contact us</strong></p>
-            <ul>
-              <li>SSO &amp; on-prem options</li>
-              <li>Priority support</li>
-              <li>Custom integrations</li>
-            </ul>
-            <a class="btn btn-outline" href="contact.html">Talk to sales</a>
+            <p>Neat summaries for planning &amp; design reviews.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How it works -->
-    <section id="how" class="section">
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section section--alt">
       <div class="container">
         <h2>How it works</h2>
         <ol class="steps">
-          <li><strong>Set design criteria</strong> — choose Storm or Foul, set ks &amp; viscosity. UK-ready defaults.</li>
+          <li><strong>Set design criteria</strong> — choose Storm or Foul, set ks &amp; viscosity (UK-ready defaults).</li>
           <li><strong>Build network</strong> — add pipes, inflows, and downstream references (non-sequential allowed).</li>
           <li><strong>Run &amp; review</strong> — check capacity and flags against DCG/CEWIS thresholds.</li>
           <li><strong>Export</strong> — download tidy PDFs/CSVs for submissions and reviews.</li>
@@ -155,8 +140,8 @@
       </div>
     </section>
 
-    <!-- Resources -->
-    <section id="resources" class="section" style="background:var(--white);border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
+    <!-- RESOURCES -->
+    <section id="resources" class="section">
       <div class="container">
         <h2>Resources</h2>
         <div class="grid-3">
@@ -173,13 +158,42 @@
           <div class="card">
             <h3>Support</h3>
             <p>Questions or feedback? We’re here to help.</p>
-            <a class="btn btn-outline" href="contact.html">Contact us</a>
+            <a class="btn btn-outline" href="#contact">Contact us</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card">
+          <form method="POST" action="https://formspree.io/f/your-id-here">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:.8rem;">
+              <div>
+                <label for="name">Name</label><br />
+                <input id="name" name="name" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" />
+              </div>
+              <div>
+                <label for="email">Email</label><br />
+                <input id="email" name="email" type="email" required style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" />
+              </div>
+            </div>
+            <div style="margin-top:.8rem;">
+              <label for="message">Message</label><br />
+              <textarea id="message" name="message" rows="6" style="width:100%; padding:.7rem; border:1px solid #e5e7eb; border-radius:.6rem;" placeholder="Project, timeline, anything else..."></textarea>
+            </div>
+            <div style="margin-top:1rem;">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container f-row">
       <div>© 2025 AutoDrainage. All rights reserved.</div>
