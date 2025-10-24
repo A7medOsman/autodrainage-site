@@ -1,4 +1,4 @@
-/* Light, upbeat theme with mint/turquoise accents and warm highlights */
+/* Light, modern theme with mint/emerald accents */
 :root{
   --bg:#F7FAFB;
   --bg-2:#FFFFFF;
@@ -6,10 +6,9 @@
   --text:#0F172A;
   --muted:#5B6778;
   --primary:#2AD1C8;     /* mint */
-  --primary-2:#10B981;    /* emerald */
+  --primary-2:#10B981;   /* emerald */
   --ring:rgba(16,185,129,.25);
   --shadow:0 6px 24px rgba(16,185,129,.16);
-  --warm:#FFB86C;         /* subtle warm accent */
   --white:#FFFFFF;
 }
 *{box-sizing:border-box}
@@ -17,7 +16,7 @@ html,body{height:100%}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
   background:
     radial-gradient(700px 350px at 12% 10%, #E8FFF9, transparent 55%),
@@ -30,133 +29,89 @@ body{
 main{flex:1}
 a{color:#0B8E85;text-decoration:none}
 a:hover{opacity:.9}
-.container{max-width:1180px;margin:0 auto;padding:0 1.2rem}
+.container{max-width:1360px;margin:0 auto;padding:0 1.2rem}
 
-/* NAV — pinned, deeper, with elevation on scroll */
-.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(15,23,42,.06)}
+/* NAV (sticky & deeper) */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(15,23,42,.06)}
 .nav.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.06)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1.05rem 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0}
 .brand{display:flex;align-items:center;gap:.65rem;font-weight:800;font-size:1.1rem;color:var(--text)}
-.logo-img{height:38px;width:auto;border-radius:10px}
+.logo-img{height:40px;width:auto;border-radius:10px}
 .nav-links{display:flex;gap:.35rem}
-.nav-links a{padding:.6rem .9rem;border-radius:.7rem;color:var(--text);font-weight:600}
+.nav-links a{padding:.7rem 1rem;border-radius:.7rem;color:var(--text);font-weight:700}
 .nav-links a.active,.nav-links a:hover{background:rgba(16,185,129,.12)}
 .menu-btn{display:none}
 .mobile-menu{display:none}
 @media (max-width:860px){
   .nav-links{display:none}
-  .menu-btn{display:block;background:transparent;border:1px solid rgba(15,23,42,.12);color:var(--text);padding:.55rem .8rem;border-radius:.7rem}
+  .menu-btn{display:block;background:transparent;border:1px solid rgba(15,23,42,.12);color:var(--text);padding:.6rem .9rem;border-radius:.7rem}
   .mobile-menu{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(15,23,42,.06)}
   .mobile-menu a{display:block;padding:1rem 1.2rem;color:var(--text)}
   .mobile-menu a:hover{background:rgba(16,185,129,.12)}
 }
 @media (min-width:861px){.mobile-menu{display:none!important}}
 
+/* TYPE SCALE – bigger base text */
+html{font-size:17px}
+@media (min-width:1280px){html{font-size:17.5px}}
+
+h1,h2,h3{margin:0 0 .35rem}
+h1{font-size:2.8rem;line-height:1.12}
+h2{font-size:1.7rem}
+h3{font-size:1.12rem}
+.lead{font-size:1.12rem;color:var(--muted);max-width:54ch}
+.tagline{font-weight:800;color:#0B8E85;margin:.25rem 0 .3rem}
+
 /* HERO */
-.hero{position:relative;padding:100px 0 70px;overflow:hidden}
+.hero{position:relative;padding:84px 0 56px;overflow:hidden}
 .hero-bg .blob{position:absolute;filter:blur(30px);opacity:.5}
 .blob.b1{top:-120px;left:-120px;width:360px;height:360px;background:#E7FFF8;border-radius:50%}
 .blob.b2{top:-60px;right:10%;width:420px;height:420px;background:#FFF2E6;border-radius:50%}
-.blob.b3{bottom:-160px;left:40%;width:380px;height:380px;background:#EAFBF7;border-radius:50%}
-.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center}
-.hero h1{font-size:2.7rem;line-height:1.15;margin:0 0 .6rem}
-.lead{font-size:1.12rem;color:var(--muted);max-width:50ch}
-.cta{display:flex;gap:.85rem;margin-top:1.2rem}
-.btn{display:inline-block;border:none;padding:.95rem 1.2rem;border-radius:1rem;font-weight:800;cursor:pointer;letter-spacing:.2px}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:1.6rem;align-items:center}
+.cta{display:flex;gap:.9rem;margin-top:1rem}
+.btn{display:inline-block;border:none;padding:1rem 1.25rem;border-radius:1rem;font-weight:800;cursor:pointer;letter-spacing:.2px}
 .btn-primary{background:linear-gradient(90deg,var(--primary),var(--primary-2));color:#05201E;box-shadow:var(--shadow)}
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-ghost{background:#FFFFFF;border:1px solid rgba(15,23,42,.1);color:#0F172A}
 .btn-ghost:hover{box-shadow:0 6px 20px rgba(0,0,0,.06)}
-.hero-trust{margin-top:1rem;font-weight:600;color:#0B8E85}
+.hero-trust{margin-top:1rem;font-weight:700;color:#0B8E85}
 .hero-art{display:grid;place-items:center}
-.device{width:min(460px,100%);background:#1218260d;border:1px solid rgba(15,23,42,.08);border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.device{width:min(520px,100%);background:#1218260d;border:1px solid rgba(15,23,42,.08);border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
 .device-bar{height:36px;border-bottom:1px solid rgba(15,23,42,.08);background:linear-gradient(180deg,#fff,#f8fbfc);border-top-left-radius:24px;border-top-right-radius:24px}
-.device-screen{height:280px;padding:12px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;background:#fff}
+.device-screen{height:310px;padding:12px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;background:#fff}
 @media (max-width:980px){.hero-inner{grid-template-columns:1fr}}
 
-/* SECTIONS (smooth flow) */
-.section{padding:80px 0}
-.section-head{margin-bottom:20px}
-.section-head .sub{color:var(--muted);margin-top:.3rem}
+/* SECTIONS – tighter spacing */
+.section{padding:56px 0}
+.section-head{margin-bottom:12px}
+.section-head .sub{color:var(--muted);}
 
 /* SHOWCASE */
-.showcase{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center}
+.showcase{display:grid;grid-template-columns:1.05fr .95fr;gap:1.2rem;align-items:center}
 .shot-img{border:1px solid #E3EEF3;border-radius:16px;background:#fff;box-shadow:0 6px 22px rgba(1,115,97,.08);overflow:hidden}
 .info h3{margin-top:0}
 .bullets{margin:.6rem 0 1rem;padding-left:1.1rem}
-.store{display:flex;align-items:center;gap:.9rem;margin-top:.6rem}
-.gp-badge{height:54px;width:auto;display:block}
-.coming{color:var(--muted)}
+.store-logos{display:flex;align-items:center;gap:12px;margin-top:.6rem}
+.gp-badge{height:56px;width:auto;display:block}
+.store-note{color:var(--muted);font-weight:700}
+.store-divider{width:1px;height:28px;background:rgba(15,23,42,.12);display:inline-block}
 @media (max-width:960px){.showcase{grid-template-columns:1fr}}
 
-/* GRID + CARDS */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+/* CARDS & GRID */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
 @media (max-width:960px){.grid-3{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid rgba(15,23,42,.08);padding:1.15rem;border-radius:1rem;box-shadow:0 1px 0 rgba(15,23,42,.04)}
-.card h3{margin:.2rem 0 .35rem}
+.card{background:var(--card);border:1px solid rgba(15,23,42,.08);padding:1rem;border-radius:1rem;box-shadow:0 1px 0 rgba(15,23,42,.04)}
 .card p{color:var(--muted)}
-.card.feat .ico{font-size:1.35rem;background:linear-gradient(120deg,#E4FFF7,#FFF6EA);border-radius:.65rem;padding:.35rem .5rem;display:inline-block;margin-bottom:.4rem}
+.card.feat .ico{font-size:1.25rem;background:linear-gradient(120deg,#E4FFF7,#FFF6EA);border-radius:.6rem;padding:.35rem .5rem;display:inline-block;margin-bottom:.35rem}
 
 /* FORM */
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.input{width:100%;padding:.95rem;border:1px solid rgba(15,23,42,.12);border-radius:.8rem;background:#fff;color:var(--text)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.input{width:100%;padding:1rem;border:1px solid rgba(15,23,42,.12);border-radius:.8rem;background:#fff;color:var(--text)}
 .input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 6px var(--ring)}
 .mt-8{margin-top:.8rem}
 .mt-12{margin-top:1.2rem}
 
 /* FOOTER */
-.footer{border-top:1px solid rgba(15,23,42,.06);padding:28px 0;margin-top:28px;background:linear-gradient(180deg,#ffffff, #f6faf9)}
+.footer{border-top:1px solid rgba(15,23,42,.06);padding:28px 0;margin-top:28px;background:linear-gradient(180deg,#ffffff,#f6faf9)}
 .f-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .socials a{margin-right:.8rem;color:#0F172A}
-
-/* Store badges row (Google Play + Windows note) */
-.store-logos{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-top:.8rem;
-}
-.gp-badge{
-  height:56px;           /* adjust to 60–64px if you want larger */
-  width:auto;
-  display:block;
-}
-.store-note{
-  color:var(--muted);
-  font-weight:600;
-}
-.store-divider{
-  width:1px;
-  height:28px;
-  background:rgba(15,23,42,.12);
-  display:inline-block;
-}
-/* === Layout & type tuning (drop-in overrides) === */
-
-/* 1) Larger base type */
-html { font-size: 16.5px; }                 /* up from default */
-@media (min-width: 1280px) {
-  html { font-size: 17px; }                 /* nice on large screens */
-}
-
-/* 2) Wider content area */
-.container { max-width: 1320px; }           /* was ~1180px; increase if you want even wider */
-
-/* 3) Tighter vertical spacing */
-.hero { padding: 84px 0 56px; }             /* was 100px 0 70px */
-.section { padding: 56px 0; }               /* was 80px 0 */
-.section-head { margin-bottom: 12px; }      /* was 20px */
-
-/* 4) Keep headings readable at larger base size */
-.hero h1 { font-size: 2.8rem; }             /* scale with larger base */
-.lead { font-size: 1.12rem; }               /* subtle bump */
-
-/* 5) Slightly tighter grids/cards to match reduced spacing */
-.grid-3 { gap: .9rem; }                      /* was 1rem */
-.showcase { gap: 1.2rem; }                   /* was 2rem */
-.card { padding: 1rem; }                     /* was 1.15rem */
-
-/* 6) Forms/badges spacing tweak */
-.form-grid { gap: .6rem; }                   /* was .8rem */
-.store-logos { margin-top: .6rem; }          /* was .8rem */
-
